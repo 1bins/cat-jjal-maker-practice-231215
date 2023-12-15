@@ -1,12 +1,14 @@
-const MainCard = () => {
+const MainCard = ({ mainCat, onHeartClick, alreadyHeart }) => {
+    const heartIcon = alreadyHeart ? "💖" : "🤍";
     return (
         <div className="main-card">
             <img
-                src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react"
+                src={mainCat}
                 alt="고양이"
                 width="400"
+                style={{ maxHeight: "460px", objectFit: "contain" }}
             />
-            <button>🤍</button>
+            <button onClick={onHeartClick}>{heartIcon}</button>
         </div>
     );
 }

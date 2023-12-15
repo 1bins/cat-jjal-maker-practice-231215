@@ -1,6 +1,6 @@
-const Title = () => {
+const Title = (prop) => {
     return (
-        <h1>1번째 고양이 가라사대</h1>
+        < h1 > {prop.children}</h1 >
     );
 }
 
